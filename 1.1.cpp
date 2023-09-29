@@ -14,14 +14,18 @@ int main()
         cout << "Вы ввели не число!" << endl;
     }
     else {
-        cout << "Вы ввели число " << a << endl;
-    }
-    //if (typeid(a).name() != "int")
-    //{
-    //    cout << "Тип данных не int" << endl;
-    //}
-    //else
-    //{
-    //    cout << "OK" << endl;
-    //}
+        cout << "\tВведите a\t" << endl;
+        cin >> b;
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
+            cout << "Вы ввели не число!" << endl;
+        }
+        else
+        {
+            cout << "\tR=\t" << 3 * pow(a, 2) + 3 * pow(b, 3) + 4.9 << endl;
+
+        };
+    };
+}
